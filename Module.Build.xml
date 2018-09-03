@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<CreateModuleInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Clients>
+    <DotNetCoreDll>..\..\lib\CoreServicesClients.Net.dll</DotNetCoreDll>
+    <DotNetFrontendFrameworkDll>..\..\output\bincore\DecisionsFramework.Net.dll</DotNetFrontendFrameworkDll>
+    <SLCoreDll>..\..\lib\CoreServicesClients.SL.dll</SLCoreDll>
+    <SLFrontendFrameworkDll>..\..\output\bincore\DecisionsFramework.SL.dll</SLFrontendFrameworkDll>
+    <SilverLightsSDKAssembliesPath>..\..\lib\silverlight</SilverLightsSDKAssembliesPath>
+    <References >
+	<string>..\..\lib\MSAzure\Microsoft.Data.Edm.dll</string>
+		<string>..\..\lib\MSAzure\Microsoft.Data.OData.dll</string>
+		<string>..\..\lib\MSAzure\Microsoft.Data.Services.Client.dll</string>
+		<string>..\..\lib\MSAzure\System.Spatial.dll</string>
+	</References>
+	<CopyReferenceToModule>true</CopyReferenceToModule>
+  </Clients>
+  <Resources NoComponents="true">
+    <ServicesDlls>
+      <string>.\Visual Studio Project Files\bin\Debug\ExampleModule.dll</string>    
+    </ServicesDlls>
+    <CliDlls/>
+    <WebPages/>
+    <SilverlightDlls>	
+	</SilverlightDlls>	
+    <AgentDlls />
+    <InstallScript>		
+	</InstallScript>
+    <SqlScripts />
+    <ObjectsToImport>     	
+    </ObjectsToImport>
+    <MsSqlScript />
+  </Resources>
+<Version></Version>
+	<Description>This module has steps that allow you to connect to things and use custom flow steps and rules.</Description>
+</CreateModuleInfo>
