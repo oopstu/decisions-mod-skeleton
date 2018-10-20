@@ -17,7 +17,7 @@
   </Clients>
   <Resources NoComponents="true">
     <ServicesDlls>
-      <string>.\Visual Studio Project Files\bin\Debug\ExampleModule.dll</string>    
+      <string>.\MyModuleCode\bin\Debug\ExampleModule.dll</string>    
     </ServicesDlls>
     <CliDlls/>
     <WebPages/>

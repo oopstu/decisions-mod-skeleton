@@ -6,22 +6,20 @@
   </PropertyGroup>
 
   	<Target Name="build_all">
-		<Exec Command="$(CheckChanges) &quot;.&quot;" ConsoleToMsBuild="true">
-			<Output TaskParameter="ConsoleOutput" PropertyName="ShouldBuild" />
-		</Exec>
-		<CallTarget Targets="do_build" Condition="$(ShouldBuild.Contains('CHANGES'))" />
-<Exec Command="$(CheckChanges) &quot;.&quot;" ConsoleToMsBuild="true"/>
+	
+		<CallTarget Targets="do_build" />
+
 	</Target>
 
 	<Target Name="do_build">
-	<MSBuild Projects=".\Visual Studio Project Files\build.proj" Properties="Configuration=Debug" />	
-	<CallTarget Targets="set_module_version"/>	
+	<MSBuild Projects=".\MyModuleCode\build.proj" Properties="Configuration=Debug" />	
+
     	<CallTarget Targets="build_module"/>	
   </Target>
   
   
   <Target Name="build_module">
-    <Exec Command="$(CreateModule) -buildmodule Example.Module -output &quot;..\..\output\modules&quot; -buildfile Module.Build.versioned.xml"/>
+    <Exec Command="$(CreateModule) -buildmodule Example.Module -output &quot;.\&quot; -buildfile Module.Build.versioned.xml"/>
   </Target>
   
 </Project>
