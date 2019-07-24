@@ -1,8 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="build_all">
 
   <PropertyGroup>
-    <CreateModule>..\..\output\binutils\CreateModule.exe</CreateModule>
-    <CreateModuleVersion>..\..\output\binutils\UpdateModuleVersionOnBuild.exe</CreateModuleVersion>
+    <CreateModule>"C:\Program Files\Decisions\Decisions Services Manager\CreateModule.exe"</CreateModule>
   </PropertyGroup>
 
   	<Target Name="build_all">
@@ -12,14 +11,15 @@
 	</Target>
 
 	<Target Name="do_build">
-	<MSBuild Projects=".\MyModuleCode\build.proj" Properties="Configuration=Debug" />	
+	<!-- The next line is a call to your visual studio csproj file, open in VS.net and fix references if needed. -->
+	<MSBuild Projects=".\MyModuleCode\MyModuleCode.csproj" Properties="Configuration=Debug" />	
 
     	<CallTarget Targets="build_module"/>	
   </Target>
   
   
   <Target Name="build_module">
-    <Exec Command="$(CreateModule) -buildmodule Example.Module -output &quot;.\&quot; -buildfile Module.Build.versioned.xml"/>
+    <Exec Command="$(CreateModule) -buildmodule Example.Module -output &quot;.&quot; -buildfile Module.Build.xml"/>
   </Target>
   
 </Project>

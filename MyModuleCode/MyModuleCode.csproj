@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DecisionsFramework">
-      <HintPath>..\..\..\..\Program Files\Decisions\Decisions Services Manager\bin\DecisionsFramework.dll</HintPath>
+      <HintPath>C:\Program Files\Decisions\Decisions Services Manager\bin\DecisionsFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
