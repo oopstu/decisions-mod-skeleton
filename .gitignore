@@ -3,3 +3,9 @@
 ################################################################################
 
 /Example.Module.zip
+/.vs/decisions-mod-skeleton/v16/.suo
+/.vs/MyModuleCode/v16/Server/sqlite3
+/.vs
+/MyModuleCode/bin/Debug
+/MyModuleCode/obj/Debug
+/MyModuleCode/obj/Release
