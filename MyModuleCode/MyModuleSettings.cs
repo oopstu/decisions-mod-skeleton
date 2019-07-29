@@ -23,7 +23,7 @@ namespace MyModuleCode
     {
         public MyModuleSettings()
         {
-            EntityName = "My Custom App Settings";
+            EntityName = "MyModule Custom App Settings";
         }
 
         [ORMField]

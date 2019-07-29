@@ -23,9 +23,9 @@ namespace MyModuleCode
         public void Initialize()
         {
             // This code on run on every start.
-            ChangedBranding();
+            //ChangedBranding();
 
-            SetupFolders();
+            //SetupFolders();
 
             EnsureCustomSettingsObject();
         }
@@ -36,22 +36,22 @@ namespace MyModuleCode
             ModuleSettingsAccessor<MyModuleSettings>.SaveSettings();
         }
 
-        private void SetupFolders()
-        {
-            SystemUserContext system = new SystemUserContext();
-            if (FolderService.Instance.Exists(system, "MY CO ROOT FOLDER") == false) {
-                // The null here is for a Folder Bheavior which allows a lot of customization
-                // of a folder including custom actions and a lot of filtering capability.
-                FolderService.Instance.CreateRootFolder(system, "MY CO ROOT FOLDER", "My Company Designs", null);
-            }
-        }
+        //private void SetupFolders()
+        //{
+        //    SystemUserContext system = new SystemUserContext();
+        //    if (FolderService.Instance.Exists(system, "MY CO ROOT FOLDER") == false) {
+        ///        // The null here is for a Folder Bheavior which allows a lot of customization
+        //        // of a folder including custom actions and a lot of filtering capability.
+        //        FolderService.Instance.CreateRootFolder(system, "MY CO ROOT FOLDER", "My Company Designs", null);
+        //    }
+        //}
 
-        private void ChangedBranding()
-        {
-            ModuleSettingsAccessor<PortalSettings>.Instance.SloganText = "My Custom Rule Portal";
+        //private void ChangedBranding()
+        //{
+        //    ModuleSettingsAccessor<PortalSettings>.Instance.SloganText = "My Custom Rule Portal";
 
-            ModuleSettingsAccessor<DesignerSettings>.Instance.StudioSlogan = "My Custom Rule Studio";
+        //    ModuleSettingsAccessor<DesignerSettings>.Instance.StudioSlogan = "My Custom Rule Studio";
 
-        }
+        //}
     }
 }
